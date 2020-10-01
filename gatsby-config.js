@@ -6,6 +6,8 @@
 
 module.exports = {
   plugins: [
+    `gatsby-source-fontawesome`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
