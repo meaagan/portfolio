@@ -16,7 +16,9 @@ ul#links {
   height: 4em;
   display: flex;
   justify-content: flex-end;
-  margin:-10px;
   position: fixed;
   width: 100%;
+  top:0;
+  overflow: hidden;
+  z-index: 9999;
 }

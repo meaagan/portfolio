@@ -1,8 +1,9 @@
-.container {
+.introContainer {
   width: 50%;
   margin: 0 auto;
   display: flex;
   margin-top: 10%;
+  height: 50vh;
 }
 
 .intro {
@@ -11,5 +12,6 @@
 
 .introImage { 
   width: 30%;
+  height: 10%;
   background-color: grey;
 }

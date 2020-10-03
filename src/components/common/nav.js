@@ -5,9 +5,9 @@ export default function Nav(){
   return(
     <div id={styles.navbar}>
       <ul id={styles.links}>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
   )

@@ -1,4 +1,31 @@
 #about {
   background: rgb(111,45,189);
-  background: linear-gradient(0deg, rgba(111,45,189,1) 26%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(0deg, rgba(111,45,189,1) 64%, rgba(255,255,255,0) 100%);
+  display: flex;
+  height: 65vh;
+  color:white;
 }
+
+.techRow li{
+  display: inline;
+  margin-right: 7px;
+}
+
+#techList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+#aboutMe {
+  width:30%;
+  margin-left: 10%;
+  margin-top: 12%;
+}
+
+#tech {
+  margin-left: 15%;
+  width: 40%;
+  margin-top: 12%;
+}
+
