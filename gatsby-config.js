@@ -6,6 +6,7 @@
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-formol`,
     `gatsby-source-fontawesome`,
     `gatsby-plugin-fontawesome-css`,
     {

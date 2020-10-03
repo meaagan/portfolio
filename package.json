@@ -22,9 +22,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "bootstrap": "^4.5.2",
+    "date-fns": "^2.0.0-beta.5",
+    "formol": "^2.8.3",
     "gatsby": "^2.24.66",
     "gatsby-plugin-emotion": "^4.3.12",
     "gatsby-plugin-fontawesome-css": "^1.0.0",
+    "gatsby-plugin-formol": "^0.1.1",
     "gatsby-source-cloudinary": "^0.1.14",
     "gatsby-source-fontawesome": "0.0.1",
     "react": "^16.12.0",
@@ -32,6 +35,8 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "babel-plugin-add-react-static-displayname": "^0.0.2",
     "prettier": "2.1.2"
   },
   "repository": {
