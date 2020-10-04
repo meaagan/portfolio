@@ -11,10 +11,11 @@ export default function Contact(){
           <h2>Like what you see?</h2>
           <p>E-mail me at meagan.butters@gmail.com to set up a call</p>
           <p>Click here to view my CV</p>
+          <p>test</p>
         </div>
         <div className={styles.contactText}>
           <h2>Have an interesting project?</h2>
-          <Form />
+        <Form />
         </div>
       </div>
       {/* <div id={styles.bg}></div> */}
