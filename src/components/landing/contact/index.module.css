@@ -16,10 +16,13 @@
   background-color: #6f2dbd;
   height: 50vh; 
   margin-top: 60vh;
+  color:white;
 }
 
 .contact {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 .contactText {

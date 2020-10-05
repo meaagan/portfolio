@@ -6,14 +6,8 @@
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-formol`,
+    `gatsby-plugin-material-ui`,
     `gatsby-source-fontawesome`,
     `gatsby-plugin-fontawesome-css`,
-    {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        
-      },
-    },
   ],
 }
