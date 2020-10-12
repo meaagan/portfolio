@@ -1,12 +1,15 @@
 import React from "react"
-import TextField from '@material-ui/core/TextField';
+// import TextField from '@material-ui/core/TextField'
+import { TextField, Button } from '@material-ui/core'
+import makeStyles from "@material-ui/core/styles"
+// import Portal from '@material-ui/core/Portal'
 
-export default class Form extends React.Component {
+class Form extends React.Component {
   state = {
-   firstName: "",
-   lastName: "",
-   email: "",
-  }
+    firstName: "",
+    lastName: "",
+    email: "",
+   };
 
   handleInputChange = event => {
     const target = event.target
@@ -16,17 +19,16 @@ export default class Form extends React.Component {
     this.setState({
       [name]: value,
     })
-  }
+  };
 
-  handleSubmit = event => {
-    event.preventDefault()
-    alert(`Thank you ${this.state.firstName} ${this.state.lastName}! I will get in touch with you shortly.`)
-  }
+  // handleClick = () => {
+  //   setShow(!show)
+  // }
 
   render (){
+      // const [show, setShow] = React.useState(false);
     return (
         <form 
-          onSubmit={this.handleSubmit}
           name="contact" 
           method="POST"
           data-netlify="true" 
@@ -80,9 +82,22 @@ export default class Form extends React.Component {
             />
           </p>
           <p>
-            <button type="submit">Send</button>
+            <Button variant="contained" type="submit">
+            {/* <Button variant="contained" type="submit" onClick={handleClick}> */}
+              {/* {show ? 'Send' : 'Sent!'} */}
+              Send
+            </Button>
+            {/* <div>
+              {show ? (
+                <Portal>
+                  <span>Thank you for your message! I will get back to you as soon as possible.</span>
+                </Portal>
+              ) : null}
+            </div> */}
           </p>
         </form>
     )
   }
 }
+
+export default Form

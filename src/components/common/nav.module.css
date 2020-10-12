@@ -20,5 +20,5 @@ ul#links {
   width: 100%;
   top:0;
   overflow: hidden;
-  z-index: 9999;
+  background-color: white;
 }

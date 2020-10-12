@@ -1,9 +1,12 @@
 import React from "react"
 import styles from "./index.module.css"
 import Form from "./form"
+import Triangle from "../../../../assets/triangle.inline.svg"
 
 export default function Contact(){
   return(
+    <div id={styles.svgContact}>
+    <Triangle />    
     <div id={styles.contactContainer}>
       <h1>I am currently available for full-time and freelance work. Let's talk!</h1>
       <div className={styles.contact}>
@@ -17,6 +20,7 @@ export default function Contact(){
           <Form />
         </div>
       </div>
+    </div>
     </div>
   )
 }

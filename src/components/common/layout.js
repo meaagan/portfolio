@@ -6,7 +6,6 @@ export default function Layout({ children }) {
   return (
     <div>
       <Nav />
-      <Social />
       {children}
     </div>
   )
