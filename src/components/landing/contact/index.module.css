@@ -1,19 +1,12 @@
-svg {
-  margin-bottom:-388px;
-}
-
 #svgContact {
   margin-top: 10%;
 }
 
 #contactContainer {
-  position: relative;
-  background-color: #6f2dbd;
-  height: 50vh; 
-  margin-top: 60vh;
+  background: rgb(202,174,238);
+  background: linear-gradient(5deg, rgba(202,174,238,1) 0%, rgba(172,128,221,1) 22%, rgba(111,45,189,1) 51%);
   color:white;
   padding: 50px;
-  padding-bottom: 35vh;
 }
 
 #contactContainer h1 {
@@ -28,4 +21,8 @@ svg {
 
 .contactText {
   padding: 10px;
+}
+
+form {
+  color:white;
 }

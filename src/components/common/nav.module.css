@@ -21,4 +21,5 @@ ul#links {
   top:0;
   overflow: hidden;
   background-color: white;
+  z-index:999;
 }

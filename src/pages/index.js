@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../components/common/layout"
-import Intro from "../components/landing/intro/index"
-import About from "../components/landing/about/index"
-import Projects from "../components/landing/projects/index"
-import Contact from "../components/landing/contact/index"
-import Social from "../components/common/social"
+import Layout from "@common/layout"
+import Intro from "@sections/intro/index"
+import About from "@sections/about/index"
+import Projects from "@sections/projects/index"
+import Contact from "@sections/contact/index"
+import Social from "@common/social"
 
 export default function Home() {
   return (

@@ -1,29 +1,25 @@
-#projectsContainer {
-  height: 65vh;
-}
-
 #projectsContainer h1 {
   text-align: center;
 }
 
 #projectsContainer img {
-  height:300px;
+  width: 60%;
 }
+
 .project {
-  display: flex;
-  margin: 50px;
-  width: 50%;
-  margin-left: 25vh;
+  display:flex;
+  margin: 0 auto;
+  width: 75%;
+  align-items: center;
+  margin-bottom: 5%;
 }
 
 .projectText {
-  margin-top: 65px;
-  padding: 5px;
-  width: 30%;
+  width: 40%;
+  margin: 15px;
+  padding: 10px;
   background-color: white;
   -webkit-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
   -moz-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
   box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
-  position: absolute;
-  left:575px;
 }

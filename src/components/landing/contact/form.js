@@ -1,15 +1,34 @@
 import React from "react"
-// import TextField from '@material-ui/core/TextField'
 import { TextField, Button } from '@material-ui/core'
-import makeStyles from "@material-ui/core/styles"
-// import Portal from '@material-ui/core/Portal'
+
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
 
 class Form extends React.Component {
+  constructor(){
+    super();
+    this.state= {text: 'Submit'}
+  }
   state = {
     firstName: "",
     lastName: "",
     email: "",
    };
+
+   handleClick = e => {
+     fetch("/", {
+       method: "POST",
+       headers: { "Content-Type": "application/x-www-form-urlencoded"},
+       body: encode({ "form-name": "contact", ...this.state })
+      }) 
+        .then(() => this.setState({text:'Sent!'}))
+        .catch(error => alert(error))
+
+      e.preventDefault();
+   }
 
   handleInputChange = event => {
     const target = event.target
@@ -21,12 +40,7 @@ class Form extends React.Component {
     })
   };
 
-  // handleClick = () => {
-  //   setShow(!show)
-  // }
-
   render (){
-      // const [show, setShow] = React.useState(false);
     return (
         <form 
           name="contact" 
@@ -34,7 +48,6 @@ class Form extends React.Component {
           data-netlify="true" 
           data-netlify-honeypot="bot-field"
           Content-Type="application/x-www-form-urlencoded"
-          action="/thankyou"
         >
           <input type="hidden" name="form-name" value="contact" />
           <p>
@@ -82,18 +95,12 @@ class Form extends React.Component {
             />
           </p>
           <p>
-            <Button variant="contained" type="submit">
-            {/* <Button variant="contained" type="submit" onClick={handleClick}> */}
-              {/* {show ? 'Send' : 'Sent!'} */}
-              Send
+            <Button variant="contained" type="submit" onClick= {this.handleClick}>
+              {this.state.text}
             </Button>
-            {/* <div>
-              {show ? (
-                <Portal>
-                  <span>Thank you for your message! I will get back to you as soon as possible.</span>
-                </Portal>
-              ) : null}
-            </div> */}
+            <div>
+                  {/* <span>Thank you for your message! I will get back to you as soon as possible.</span> */}
+            </div>
           </p>
         </form>
     )
