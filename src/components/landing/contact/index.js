@@ -14,7 +14,7 @@ export default function Contact(){
           <div className={styles.contactText}>
             <h2>Like what you see?</h2>
             <p>E-mail me at meagan.butters@gmail.com to set up a call</p>
-            <p><a href={CV} target="_blank">View my CV</a></p>
+            <p><a href={CV} target="_blank" rel="noreferrer">View my CV</a></p>
           </div>
           <div className={styles.contactText}>
             <h2>Have an interesting project?</h2>

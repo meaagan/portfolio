@@ -1,12 +1,10 @@
 ul#links li {
   display: inline;
   margin-left: 10%;
-  border-bottom: 5px solid purple;
 }
 
 ul#links {
   list-style: none;
-  margin-right: 10%;
 }
 
 #navbar {
@@ -15,7 +13,7 @@ ul#links {
   box-shadow: 6px 8px 19px 0px rgba(0,0,0,0.33);
   height: 4em;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   position: fixed;
   width: 100%;
   top:0;
@@ -23,3 +21,4 @@ ul#links {
   background-color: white;
   z-index:999;
 }
+

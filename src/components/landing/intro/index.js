@@ -3,6 +3,7 @@ import styles from "./index.module.css"
 
 export default function Intro() {
   return(
+    <div id={styles.introContent}>
     <div className={styles.introContainer}>
       <div className={styles.intro}>
         <h1>Hi, my name is Meagan Butters and I am a fullstack developer from Montreal.</h1>
@@ -12,5 +13,6 @@ export default function Intro() {
 
       </div>
     </div>
+  </div>
   )
 }
