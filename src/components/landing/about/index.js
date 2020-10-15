@@ -19,10 +19,13 @@ export default function About(){
       <div id={styles.aboutContent}>
       <div id={styles.aboutMe}>
         <h1>About</h1>
-        <p>Although designing is in my nature, I have realized through trial and error that my passion is building. Designing is just building block of building. </p>
+        <div>
+          <p>Alumni from Concordia University in the Specialization of Computation Arts and Le Wagon Montreal full-stack web development bootcamp (batch #438). </p>
+          <p>In addition to being very passionate about web development, I have experience in digital marketing, design of all sorts (with an emphasis on 3D modelling and video), and coaching artistic swimming (since 2010). I am an organized and systematic person who enjoys problem solving in a creative way. Although I work independantly most of the time, I like learning from others through group projects and feedback on my own work. I am currently learning React in my spare time, but in the near future I am looking to learn more about TDD, DevOps, Docker, and Python.</p>
+        </div>
       </div>
       <div id={styles.tech}>
-        <h2>Technology I use</h2>
+        <h1>Tech Stack</h1>
         <div id={styles.techList}>
           <div className={styles.techRow}>
             <div><HTML /></div>

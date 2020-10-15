@@ -3,7 +3,6 @@
   margin: 0 auto;
   display: flex;
   margin-top: 10%;
-  height: 40vh;
 }
 
 .intro {
@@ -15,3 +14,52 @@
   height: 10%;
   background-color: grey;
 }
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .introContainer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15%;
+    height: 60vh;
+  }
+}
+
+
+@media (min-width: 576px) {
+  .introContainer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15%;
+    height: 60vh;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .introContainer {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .introContainer {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .introContainer {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10%;
+  }
+}
+
+

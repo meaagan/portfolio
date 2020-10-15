@@ -1,31 +1,39 @@
 import React from "react";
 import styles from "./index.module.css";
 import Carousel from 'react-multi-carousel';
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import 'react-multi-carousel/lib/styles.css';
 
-const Projects = () => (
-  <StaticQuery
-      query={graphql`
-        query {
-          ladies: file(
-            sourceInstanceName: { eq: "melody" }
-            name: { eq: "melody1" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 800) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+const Projects = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      melody: allFile(filter: {relativeDirectory: {eq: "melody"}}) {
+          edges {
+            node {
+              id
+              childImageSharp {
+                fluid(maxHeight: 300) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
-        }`
+        }
       }
+    `)
 
-      render={data => (
+    const melodyImg = data.melody.edges
+      
+      return (       
         <div id={styles.projectsContainer}>
           <h1>Projects</h1>
           <div className={styles.project}>
+            {melodyImg.map(({ node }) => {
+              return(
+                <Img fluid={node.childImageSharp.fluid} />
+              )
+            })}
               
             <div className={styles.projectText}>
                 Melody is an Airbnb clone for instruments. It was built with Ruby on Rails, Javascript 2015, PostgreSQL, Algolia, AJAX, and SCSS, by Kyle Masterson, Francesca Hall, Millie Senecal, and Meagan Butters and is hosted on Heroku.
@@ -57,27 +65,6 @@ const Projects = () => (
             </div>
         </div>
       </div>
-    )}
-  />
-)
-
-
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
+    )
 }
+export default Projects
