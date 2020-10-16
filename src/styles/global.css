@@ -27,3 +27,8 @@ a {
 		transparent 50%
   );
 }
+
+.MuiIconButton-label,
+.MuiTypography-body1 {
+  font-family: 'Josefin Sans', sans-serif !important;
+}

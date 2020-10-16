@@ -1,10 +1,6 @@
-#svgContact {
-  margin-top: 10%;
-}
-
 #contactContainer {
-  background: rgb(202,174,238);
-  background: linear-gradient(0deg, rgba(202,174,238,1) 0%, rgba(158,228,171,1) 21%, rgba(128,189,221,1) 47%, rgba(111,45,189,1) 77%);
+  background: rgb(213,199,252);
+  background: linear-gradient(0deg, rgba(213,199,252,1) 0%, rgba(202,174,238,1) 10%, rgba(111,45,189,1) 100%);
   color:white;
   padding: 50px;
 }
@@ -29,4 +25,42 @@ form {
 
 #contactContainer a {
   color:white;
+}
+
+@media (min-width: 100px) and (max-width: 575px) {
+  .contact {
+    display: inline-block;
+  }
+}
+
+
+@media (min-width: 576px) {
+  .contact {
+    display: inline-block;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
 }

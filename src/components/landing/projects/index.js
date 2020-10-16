@@ -14,7 +14,7 @@ const Projects = () => {
           }
         }
       }
-      rentie: file(name: {eq: "rentie2"}, relativeDirectory: {eq: "rentie"}) {
+      rentie: file(name: {eq: "rentie6"}, relativeDirectory: {eq: "rentie"}) {
         childImageSharp {
           fluid(maxHeight: 300,  quality: 100) {
             ...GatsbyImageSharpFluid
@@ -32,8 +32,8 @@ const Projects = () => {
     `)
       
       return (       
-        <div id={styles.projectsContainer}>
-          <h1>Projects</h1>
+        <div id='projects'>
+          <h1 style={{textAlign:"center"}}>Projects</h1>
           <div className={styles.project}>
             <figure className={styles.projectImg}>
               <Img fluid = {data.cheers.childImageSharp.fluid} />

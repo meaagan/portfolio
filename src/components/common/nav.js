@@ -1,27 +1,70 @@
+import { Link } from "gatsby"
 import React from "react"
-// import NavDropdown from "react-bootstrap/Navbar";
-import Navbar from 'react-bootstrap/Navbar';
+import SideDrawer from "./sidedrawer"
+import styles from "./nav.module.css"
+import { makeStyles } from "@material-ui/core/styles"
+import {
+  AppBar,
+  Toolbar,
+  Container,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Hidden
+} from "@material-ui/core";
 
+const useStyles = makeStyles({
+  navbarDisplayFlex: {
+    display: `flex`,
+    justifyContent: `space-between`,
+  },
+  navDisplayFlex: {
+    display: `flex`,
+    justifyContent: `space-between`,
+    backgroundColor: `white`,
+  },
+  toolbarStyles: {
+    color: `black`,
+    backgroundColor: `white`,
+  },
+  linkText: {
+    backgroundImage: `none`,
+  }
+});
 
-export default function Nav(){
-  return(
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Meagan</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#projects">Projects</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-          {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-          </NavDropdown> */}
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+const navLinks = [
+  { title: `about`, path: `#about` },
+  { title: `projects`, path: `#projects` },
+  { title: `contact`, path: `#contact` }
+]
+
+const Nav = () => {
+  const classes = useStyles()
+  return (
+    <AppBar className={classes.toolbarStyles} position="fixed">
+      <Toolbar >
+        <Container maxWidth="md" className={classes.navbarDisplayFlex}>
+          <IconButton edge="start" color="inherit" aria-label="home">
+            Meagan Butters
+          </IconButton>
+          <Hidden smDown>
+            <List component="nav" aria-labelledby="main navigation" className={classes.navDisplayFlex}>
+              {navLinks.map(({ title, path }) => (
+                  <Link to={path} key={title} className={classes.linkText}>
+                    <ListItem button>
+                      <ListItemText primary={title} />
+                    </ListItem>
+                  </Link>
+              ))}
+            </List>
+          </Hidden>
+          <Hidden mdUp>
+            <SideDrawer navLinks={navLinks} />
+          </Hidden>
+        </Container>
+      </Toolbar>
+    </AppBar>
   )
 }
+export default Nav

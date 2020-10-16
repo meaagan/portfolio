@@ -15,7 +15,7 @@ import Netlify from "@assets/tech/netlify.inline.svg"
 
 export default function About(){
   return(
-    <div id={styles.about}>
+    <div id="about">
       <div id={styles.aboutContent}>
       <div id={styles.aboutMe}>
         <h1>About</h1>
