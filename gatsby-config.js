@@ -8,8 +8,30 @@ const path = require('path');
 
 module.exports = {
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Meagan Butters`,
+        short_name: `MB`,
+        start_url: `/`,
+        icons: [
+          {
+              "src": "/android-chrome-192x192.png",
+              "sizes": "192x192",
+              "type": "image/png"
+          },
+          {
+              "src": "/android-chrome-384x384.png",
+              "sizes": "384x384",
+              "type": "image/png"
+          }
+      ],
+      theme_color: `#ffffff`,
+      background_color: `#ffffff`,
+      display: `standalone`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
