@@ -32,7 +32,7 @@ const Projects = () => {
     `)
       
       return (       
-        <div id='projects'>
+        <div id='projects' className={styles.projects}>
           <h1 style={{textAlign:"center"}}>Projects</h1>
           <div className={styles.project}>
             <figure className={styles.projectImg}>

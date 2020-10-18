@@ -13,6 +13,7 @@ import {
   ListItemText,
   Hidden
 } from "@material-ui/core";
+import HideOnScroll from "./hideonscroll"
 
 const useStyles = makeStyles({
   navbarDisplayFlex: {
@@ -42,29 +43,31 @@ const navLinks = [
 const Nav = () => {
   const classes = useStyles()
   return (
-    <AppBar className={classes.toolbarStyles} position="fixed">
-      <Toolbar >
-        <Container maxWidth="md" className={classes.navbarDisplayFlex}>
-          <IconButton edge="start" color="inherit" aria-label="home">
-            Meagan Butters
-          </IconButton>
-          <Hidden smDown>
-            <List component="nav" aria-labelledby="main navigation" className={classes.navDisplayFlex}>
-              {navLinks.map(({ title, path }) => (
-                  <Link to={path} key={title} className={classes.linkText}>
-                    <ListItem button>
-                      <ListItemText primary={title} />
-                    </ListItem>
-                  </Link>
-              ))}
-            </List>
-          </Hidden>
-          <Hidden mdUp>
-            <SideDrawer navLinks={navLinks} />
-          </Hidden>
-        </Container>
-      </Toolbar>
-    </AppBar>
+    <HideOnScroll>
+      <AppBar className={classes.toolbarStyles} position="fixed">
+        <Toolbar >
+          <Container maxWidth="md" className={classes.navbarDisplayFlex}>
+            <IconButton edge="start" color="inherit" aria-label="home">
+              <Link to='#intro' key='intro'>Meagan Butters</Link>
+            </IconButton>
+            <Hidden smDown>
+              <List component="nav" aria-labelledby="main navigation" className={classes.navDisplayFlex}>
+                {navLinks.map(({ title, path }) => (
+                    <Link to={path} key={title} className={classes.linkText}>
+                      <ListItem button>
+                        <ListItemText primary={title} />
+                      </ListItem>
+                    </Link>
+                ))}
+              </List>
+            </Hidden>
+            <Hidden mdUp>
+              <SideDrawer navLinks={navLinks} />
+            </Hidden>
+          </Container>
+        </Toolbar>
+      </AppBar>
+    </HideOnScroll>
   )
 }
 export default Nav

@@ -8,23 +8,35 @@
   box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
 }
 
+
 /* extra small */
 @media (min-width: 100px) and (max-width: 575px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .projectImg {
-    width: 90%;
+    width: 90%; 
     -webkit-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
     -moz-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
     box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
   }
 
   .project {
+    display:flex;
+    flex-direction: column;
     width: 75%;
     align-items: center;
+    justify-content: center;
   }
   
   .projectText {
-    width: 100%;
+    width: 90%;
     margin: 15px;
+    margin: 0 auto;
     padding: 10px;
     background-color: white;
     -webkit-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
@@ -34,7 +46,15 @@
 }
 
 /* small */
+
 @media (min-width: 576px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .projectImg {
     width: 90%;
     -webkit-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
@@ -45,11 +65,13 @@
   .project {
     width: 75%;
     align-items: center;
+    margin: 5% auto;
     margin-bottom: 5%;
   }
   .projectText {
-    width: 100%;
-    margin: 15px;
+    width: 90%;
+    margin: 0 auto;
+    /* margin: 15px; */
     padding: 10px;
     background-color: white;
     -webkit-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);
@@ -69,7 +91,7 @@
 
   .projectText {
     width: 100%;
-    margin: 15px;
+    margin-top: 15px;
     padding: 10px;
     background-color: white;
     -webkit-box-shadow: 9px 11px 22px 0px rgba(0,0,0,0.36);

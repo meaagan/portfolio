@@ -12,6 +12,10 @@ import Github from "@assets/tech/github.inline.svg"
 import Graphql from "@assets/tech/graphql.inline.svg"
 import Heroku from "@assets/tech/heroku.inline.svg"
 import Netlify from "@assets/tech/netlify.inline.svg"
+import Sass from "@assets/tech/sass.inline.svg"
+import Webpack from "@assets/tech/webpack.inline.svg"
+import NPM from "@assets/tech/npm.inline.svg"
+import Ruby from "@assets/tech/ruby.inline.svg"
 
 export default function About(){
   return(
@@ -36,6 +40,14 @@ export default function About(){
             <p>CSS</p>
           </div>
           <div className={styles.techRow}>
+            <div><Sass /></div>
+            <p>Sass</p>
+          </div>
+          <div className={styles.techRow}>
+            <div><Ruby /></div>
+            <p>Ruby</p>
+          </div>
+          <div className={styles.techRow}>
             <div><Rails /></div>
             <p>Rails</p>
           </div>
@@ -48,24 +60,32 @@ export default function About(){
             <p>React</p>
           </div>
           <div className={styles.techRow}>
-            <div><Figma /></div>
-            <p>Figma</p>
-          </div>
-          <div className={styles.techRow}>
             <div><Postgresql /></div>
             <p>PostgreSQL</p>
+          </div>
+          <div className={styles.techRow}>
+            <div><Graphql /></div>
+            <p>GraphQL</p>
           </div>
           <div className={styles.techRow}>
             <div><Github /></div>
             <p>GitHub</p>
           </div>
           <div className={styles.techRow}>
-            <div><Netlify /></div>
-            <p>Netlify</p>
+            <div><NPM /></div>
+            <p>NPM</p>
           </div>
           <div className={styles.techRow}>
-            <div><Graphql /></div>
-            <p>GraphQL</p>
+            <div><Webpack /></div>
+            <p>Webpack</p>
+          </div>
+          <div className={styles.techRow}>
+            <div><Figma /></div>
+            <p>Figma</p>
+          </div>
+          <div className={styles.techRow}>
+            <div><Netlify /></div>
+            <p>Netlify</p>
           </div>
           <div className={styles.techRow}>
             <div><Heroku /></div>
