@@ -8,7 +8,21 @@ import Img from "gatsby-image";
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      melody: file(name: {eq: "melody2"}, relativeDirectory: {eq: "melody"}) {
+      vr: file(name: {eq: "VRPortfolio"}, relativeDirectory: {eq: "melody"}) {
+        childImageSharp {
+          fluid(maxHeight: 300,  quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      jn: file(name: {eq: "jnportfolio"}, relativeDirectory: {eq: "melody"}) {
+        childImageSharp {
+          fluid(maxHeight: 300,  quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      melody: file(name: {eq: "melody1"}, relativeDirectory: {eq: "melody"}) {
         childImageSharp {
           fluid(maxHeight: 300, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -53,7 +67,7 @@ const Projects = () => {
           <Fade>
             <div className={styles.project}>
               <figure className={styles.projectImg}>
-                <Img fluid = {data.cheers.childImageSharp.fluid} />
+                <Img fluid = {data.jn.childImageSharp.fluid} />
               </figure>
               <div className={styles.projectText}>
                 <h2>Julian Nasielski Portfolio</h2>
@@ -68,7 +82,7 @@ const Projects = () => {
           <Fade>
             <div className={styles.project}>
               <figure className={styles.projectImg}>
-                <Img fluid = {data.cheers.childImageSharp.fluid} />
+                <Img fluid = {data.vr.childImageSharp.fluid} />
               </figure>
               <div className={styles.projectText}>
                 <h2>Victor Rose Espresso Bar</h2>
