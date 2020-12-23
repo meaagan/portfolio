@@ -87,6 +87,7 @@ class Form extends React.Component {
             <TextField
               label="Message"
               id="outlined-multiline-static" 
+              type="text"
               name="message"
               multiline
               rows={4}
@@ -98,9 +99,6 @@ class Form extends React.Component {
             <Button variant="contained" type="submit" onClick= {this.handleClick}>
               {this.state.text}
             </Button>
-            <div>
-                  {/* <span>Thank you for your message! I will get back to you as soon as possible.</span> */}
-            </div>
           </p>
         </form>
     )
