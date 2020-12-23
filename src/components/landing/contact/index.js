@@ -14,7 +14,7 @@ export default function Contact(){
     <div id='contact'>
       <Triangle />
       <div id={styles.contactContainer}>
-        <h1>I am currently available for full-time and freelance work. Let's talk!</h1>
+        <h1>I am currently available for freelance work. Let's talk!</h1>
         <div className={styles.contact}>
           <div className={styles.contactText}>
             <h2>Like what you see?</h2>

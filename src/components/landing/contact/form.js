@@ -74,20 +74,6 @@ class Form extends React.Component {
             />
           </p>
           <p>
-            <TextField
-              label="Message"
-              id="outlined-multiline-static" 
-              type="text"
-              name="message"
-              value={this.state.lastName}
-              onChange={this.handleInputChange}
-              multiline
-              rows={4}
-              variant="outlined"
-              size="small"
-            />
-          </p>
-          <p>
             <TextField 
               label="Email"
               type="email" 
@@ -98,7 +84,20 @@ class Form extends React.Component {
               size="small"
             />
           </p>
-
+          <p>
+            <TextField
+              label="Message"
+              id="outlined-multiline-static" 
+              type="text"
+              name="message"
+              value={this.state.message}
+              onChange={this.handleInputChange}
+              multiline
+              rows={4}
+              variant="outlined"
+              size="small"
+            />
+          </p>
           <p>
             <Button variant="contained" type="submit" onClick= {this.handleClick}>
               {this.state.text}
