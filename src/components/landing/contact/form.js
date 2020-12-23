@@ -16,6 +16,7 @@ class Form extends React.Component {
     firstName: "",
     lastName: "",
     email: "",
+    message: "",
    };
 
    handleClick = e => {
@@ -78,6 +79,8 @@ class Form extends React.Component {
               id="outlined-multiline-static" 
               type="text"
               name="message"
+              value={this.state.lastName}
+              onChange={this.handleInputChange}
               multiline
               rows={4}
               variant="outlined"
