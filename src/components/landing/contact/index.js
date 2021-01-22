@@ -24,7 +24,7 @@ export default function Contact(){
             <p><span><FontAwesomeIcon icon={faIdCard} /></span> <a href={CV} target="_blank" rel="noreferrer">View my CV</a></p>
           </div>
           <div className={styles.contactText}>
-            <h2>Have an interesting project?</h2>
+            <h2>Have an interesting project you'd like to discuss?</h2>
             <Form />
           </div>
         </div>

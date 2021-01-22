@@ -15,6 +15,13 @@ const Projects = () => {
           }
         }
       }
+      avocado: file(name: {eq: "avocadoportfolio"}, relativeDirectory: {eq: "cheers"}) {
+        childImageSharp {
+          fluid(maxHeight: 300,  quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       jn: file(name: {eq: "jnportfolio"}, relativeDirectory: {eq: "melody"}) {
         childImageSharp {
           fluid(maxHeight: 300,  quality: 100) {
@@ -90,6 +97,21 @@ const Projects = () => {
                   Landing page for Victor Rose Espresso Bar. Made with Gatsby and hosted on Netlify.
                 <p>
                   <a href="http://www.cafevictorrose.com/">View Victor Rose Espresso Bar</a></p>
+                </p>
+              </div>
+            </div>
+          </Fade>
+          <Fade>
+            <div className={styles.project}>
+              <figure className={styles.projectImg}>
+                <Img fluid = {data.avocado.childImageSharp.fluid} />
+              </figure>
+              <div className={styles.projectText}>
+                <h2>Avocado Sushi du Village</h2>
+                <p>
+                  Landing page for Avocado Sushi restaurant. Made with Gatsby and hosted on Netlify.
+                <p>
+                  <a href="http://www.avocadosushi.ca/">View Avocado Sushi du Village</a></p>
                 </p>
               </div>
             </div>
