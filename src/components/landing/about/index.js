@@ -25,7 +25,8 @@ export default function About(){
         <h1>About</h1>
         <div>
           <p>Alumni from Concordia University in the Specialization of Computation Arts and Le Wagon Montreal full-stack web development bootcamp (batch #438). </p>
-          <p>In addition to being very passionate about web development, I have experience in digital marketing, design of all sorts (with an emphasis on 3D modelling and video), and coaching artistic swimming (since 2010). I am an organized and systematic person who enjoys problem solving in a creative way. Although I work independantly most of the time, I like learning from others through group projects and feedback on my own work. I am currently learning React in my spare time, but in the near future I am looking to learn more about TDD, DevOps, Docker, and Python.</p>
+          <p>I am an organized and systematic person who enjoys problem solving in a creative way. Although I work independantly most of the time, I like learning from others through group projects and feedback on my own work.</p>
+          <p>I am currently employed at Petal Health as a backend developer using Ruby on Rails, Sidekiq, ElasticSearch, Kibana, MySQL, git, Docker, Redis, JIRA, and Jenkins.</p>
         </div>
       </div>
       <div id={styles.tech}>
