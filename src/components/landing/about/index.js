@@ -25,8 +25,8 @@ export default function About(){
         <h1>About</h1>
         <div>
           <p>Alumni from Concordia University in the Specialization of Computation Arts and Le Wagon Montreal full-stack web development bootcamp (batch #438). </p>
-          <p>I am an organized and systematic person who enjoys problem solving in a creative way. Although I work independantly most of the time, I like learning from others through group projects and feedback on my own work.</p>
-          <p>I am currently employed at Petal Health as a backend developer using Ruby on Rails, Sidekiq, ElasticSearch, Kibana, MySQL, git, Docker, Redis, JIRA, and Jenkins.</p>
+          <p>I am an organized and systematic person who enjoys problem solving in a creative way. Although I work independantly most of the time, I like learning from others through collaboration with my peers and feedback on my own work.</p>
+          <p>I am currently employed at Petal Health as a backend developer using Ruby on Rails, Sidekiq, ElasticSearch, Kibana, MySQL, git, Docker, Redis, JIRA, and Jenkins. This year, my goal is to become more proficient in Angluar, the front end language used at Petal Health.</p>
         </div>
       </div>
       <div id={styles.tech}>
